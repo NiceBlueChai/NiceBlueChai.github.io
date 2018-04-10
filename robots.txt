@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /lib/
+
+User-agent:Baiduspider
+Disallow: /*.gif$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.png$
+Disallow: /*.bmp$

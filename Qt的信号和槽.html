@@ -88,7 +88,7 @@
 <meta property="og:description" content="信号和槽是Qt特有的信息传输驱动机制，是Qt程序设计中的重要基础，它可以让程序员在互不相干的对象之间建立联系。  槽本质上是类的成员函数，其参数可以是任意类型，它与普通的C++成员函数几乎没有区别，它可以是虚函数；也可以被重载函数；可以是公有的、保护的或私有的，也可以被其它C++成员函数调用，和普通的类成员函数唯一不同的是：槽还可以和信号连接在一起，每当和槽连接的信号被发射时，就会自动调用这个槽">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50">
-<meta property="og:updated_time" content="2018-04-07T07:11:32.732Z">
+<meta property="og:updated_time" content="2018-04-10T13:10:30.597Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qt的信号和槽">
 <meta name="twitter:description" content="信号和槽是Qt特有的信息传输驱动机制，是Qt程序设计中的重要基础，它可以让程序员在互不相干的对象之间建立联系。  槽本质上是类的成员函数，其参数可以是任意类型，它与普通的C++成员函数几乎没有区别，它可以是虚函数；也可以被重载函数；可以是公有的、保护的或私有的，也可以被其它C++成员函数调用，和普通的类成员函数唯一不同的是：槽还可以和信号连接在一起，每当和槽连接的信号被发射时，就会自动调用这个槽">
@@ -244,9 +244,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -319,8 +353,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-07T15:11:32+08:00">
-                2018-04-07
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-10T21:10:30+08:00">
+                2018-04-10
               </time>
             
           </span>
@@ -349,6 +383,19 @@
             </span>
           
 
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/Qt的信号和槽.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="Qt的信号和槽.html" itemprop="commentsCount"></span>
+                </a>
+              
+            
           
 
           
@@ -418,15 +465,14 @@
         <blockquote>
 <p>信号和槽是Qt特有的信息传输驱动机制，是Qt程序设计中的重要基础，它可以让程序员在互不相干的对象之间建立联系。<br>  <strong>槽</strong>本质上是类的成员函数，其参数可以是任意类型，它与普通的C++成员函数几乎没有区别，它可以是虚函数；也可以被重载函数；可以是公有的、保护的或私有的，也可以被其它C++成员函数调用，和普通的类成员函数唯一不同的是：槽还可以和信号连接在一起，每当和槽连接的信号被发射时，就会自动调用这个槽。</p>
 </blockquote>
-<p>###connect()语法形式如下：<br><code>connect(sender,SIGNAL(signal),receiver,SLOT(slot));</code><br>这里的sender是发送信号的对象的指针，receiver是包含槽的对象的指针，signal是被发送的信号，slot是接受信号的槽，他们都是不带参数的函数名。SIGNAL()宏和SLOT()宏会把他们的参数转换成相应的字符串。对于信号和槽，还具有以下特点。</p>
-<p>###1.一个信号可以连接多个槽</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signal),receiver,SLOT(slotA));</span><br><span class="line">connect(sender,SIGNAL(signal),receiver,SLOT(slotB));</span><br></pre></td></tr></table></figure>
+<p><strong>connect()语法形式如下：</strong><br><code>connect(sender,SIGNAL(signal),receiver,SLOT(slot));</code><br>这里的sender是发送信号的对象的指针，receiver是包含槽的对象的指针，signal是被发送的信号，slot是接受信号的槽，他们都是不带参数的函数名。SIGNAL()宏和SLOT()宏会把他们的参数转换成相应的字符串。对于信号和槽，还具有以下特点。</p>
+<h3 id="1-一个信号可以连接多个槽"><a href="#1-一个信号可以连接多个槽" class="headerlink" title="1.一个信号可以连接多个槽"></a>1.一个信号可以连接多个槽</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signal),receiver,SLOT(slotA));</span><br><span class="line">connect(sender,SIGNAL(signal),receiver,SLOT(slotB));</span><br></pre></td></tr></table></figure>
 <p>当这一信号发射时，会以不确定的顺序一个接一个的调用这个信号连接的所有槽</p>
-<p>###2.多个信号可以连接同一个槽<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signalA),receiver,SLOT(slot));</span><br><span class="line">connect(sender,SIGNAL(signalB),receiver,SLOT(slot));</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-多个信号可以连接同一个槽"><a href="#2-多个信号可以连接同一个槽" class="headerlink" title="2.多个信号可以连接同一个槽"></a>2.多个信号可以连接同一个槽</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signalA),receiver,SLOT(slot));</span><br><span class="line">connect(sender,SIGNAL(signalB),receiver,SLOT(slot));</span><br></pre></td></tr></table></figure>
 <p>无论哪个信号被发射，这个槽都会被调用</p>
-<p>###3.一个信号可以连接另外一个信号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signalA),receiver,SIGNAL(signalB));</span><br></pre></td></tr></table></figure></p>
+<h3 id="3-一个信号可以连接另外一个信号"><a href="#3-一个信号可以连接另外一个信号" class="headerlink" title="3.一个信号可以连接另外一个信号"></a>3.一个信号可以连接另外一个信号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signalA),receiver,SIGNAL(signalB));</span><br></pre></td></tr></table></figure>
 <p>当信号A发射时，也会发射与它相连的信号B</p>
-<p>###４.信号、槽之间的连接可以被移除<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disconnect(sender,SIGNAL(signal),receiver,SLOT(slot));</span><br></pre></td></tr></table></figure></p>
+<h3 id="４-信号、槽之间的连接可以被移除"><a href="#４-信号、槽之间的连接可以被移除" class="headerlink" title="４.信号、槽之间的连接可以被移除"></a>４.信号、槽之间的连接可以被移除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disconnect(sender,SIGNAL(signal),receiver,SLOT(slot));</span><br></pre></td></tr></table></figure>
 <p>因为删除对象时，Qt会自动移除和这个对象相关的所有连接，所以这个语法很少用到。</p>
 <blockquote>
 <p>除此之外，要把信号成功连接到槽（或者连接到另一个信号），还应该注意，相连接的信号和槽必须具有相同顺序相同类型的参数，如果信号的参数比它所连接的槽的参数多，那么多余的参数将被简单的忽略掉。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(rawCommandReply(int,const QString &amp;)),</span><br><span class="line">receiver,SIGNAL(processReply(int , const QString &amp;)));</span><br></pre></td></tr></table></figure></p>
@@ -435,9 +481,9 @@
 <blockquote>
 <p>实际上这种机制是在QObject中实现的，这表明信号和槽并不仅仅局限于GUI编程中，实际上这种机制可以用于任何QObject的子类中，</p>
 </blockquote>
-<p><strong>在普通的类中使用信号和槽机制</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Class Circle:public QObject</span><br><span class="line">&#123;</span><br><span class="line">	Q_ONJECT</span><br><span class="line">	public:</span><br><span class="line">		Circle()&#123;CircleRadius=0;&#125;</span><br><span class="line">		int Radius()&#123;return CircleRadius;&#125;</span><br><span class="line">	public slots:</span><br><span class="line">		void setRadius(int newRadius);</span><br><span class="line">	signals:</span><br><span class="line">		void radiusChanged(int newRadius);</span><br><span class="line">	private:</span><br><span class="line">		int circleRadius;</span><br><span class="line">&#125;;</span><br><span class="line">void Circle::setRadius(int newRadius)</span><br><span class="line">&#123;</span><br><span class="line">	if(newRadius!=circleRadius)</span><br><span class="line">	&#123;</span><br><span class="line">		circleRadius=newRadius;</span><br><span class="line">		emit radiusChanged(circleRadius);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>来看一下，setRadius()槽是如何工作的。</p>
-<h2 id="仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged-信号。这样既可以确保信号和槽连接又不会导致无限循环。"><a href="#仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged-信号。这样既可以确保信号和槽连接又不会导致无限循环。" class="headerlink" title="仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged()信号。这样既可以确保信号和槽连接又不会导致无限循环。"></a>仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged()信号。这样既可以确保信号和槽连接又不会导致无限循环。</h2><p><strong>❤️我的目标是：someday，即便你花钱看我的文章，也会觉得心满意足</strong></p>
+<h3 id="在普通的类中使用信号和槽机制"><a href="#在普通的类中使用信号和槽机制" class="headerlink" title="在普通的类中使用信号和槽机制"></a><strong>在普通的类中使用信号和槽机制</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Class Circle:public QObject</span><br><span class="line">&#123;</span><br><span class="line">	Q_ONJECT</span><br><span class="line">	public:</span><br><span class="line">		Circle()&#123;CircleRadius=0;&#125;</span><br><span class="line">		int Radius()&#123;return CircleRadius;&#125;</span><br><span class="line">	public slots:</span><br><span class="line">		void setRadius(int newRadius);</span><br><span class="line">	signals:</span><br><span class="line">		void radiusChanged(int newRadius);</span><br><span class="line">	private:</span><br><span class="line">		int circleRadius;</span><br><span class="line">&#125;;</span><br><span class="line">void Circle::setRadius(int newRadius)</span><br><span class="line">&#123;</span><br><span class="line">	if(newRadius!=circleRadius)</span><br><span class="line">	&#123;</span><br><span class="line">		circleRadius=newRadius;</span><br><span class="line">		emit radiusChanged(circleRadius);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p></p><p style="font-weight:700"><br>来看一下，setRadius()槽是如何工作的。<br>仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged()信号。这样既可以确保信号和槽连接又不会导致无限循环。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><p></p></h2><p><strong>❤️我的目标是：someday，即便你花钱看我的文章，也会觉得心满意足</strong></p>
 <hr>
 <p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>
 
@@ -560,6 +606,15 @@
 
           
 
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
         </div>
         
           
@@ -608,7 +663,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -694,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged-信号。这样既可以确保信号和槽连接又不会导致无限循环。"><span class="nav-number">1.</span> <span class="nav-text">仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged()信号。这样既可以确保信号和槽连接又不会导致无限循环。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-一个信号可以连接多个槽"><span class="nav-number">1.</span> <span class="nav-text">1.一个信号可以连接多个槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-多个信号可以连接同一个槽"><span class="nav-number">2.</span> <span class="nav-text">2.多个信号可以连接同一个槽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-一个信号可以连接另外一个信号"><span class="nav-number">3.</span> <span class="nav-text">3.一个信号可以连接另外一个信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#４-信号、槽之间的连接可以被移除"><span class="nav-number">4.</span> <span class="nav-text">４.信号、槽之间的连接可以被移除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在普通的类中使用信号和槽机制"><span class="nav-number">5.</span> <span class="nav-text">在普通的类中使用信号和槽机制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number"></span> <span class="nav-text"></span></a></div>
             
 
           </div>
@@ -728,7 +783,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.2k</span>
+    <span title="Site words total count">2.3k</span>
   
 </div>
 
@@ -910,6 +965,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 

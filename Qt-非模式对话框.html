@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="应用实例:搜索框  创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&amp;gt;setWindowFlags(Qt::Window);  在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &amp;#123;	m_s">
+<meta name="description" content="应用实例:搜索框创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&amp;gt;setWindowFlags(Qt::Window); 在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &amp;#123;	m_searc">
 <meta name="keywords" content="Qt,对话框,非模式对话框">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Qt-非模式对话框">
 <meta property="og:url" content="http://NIceBlueChai.cn/Qt-非模式对话框.html">
 <meta property="og:site_name" content="小飒的博客">
-<meta property="og:description" content="应用实例:搜索框  创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&amp;gt;setWindowFlags(Qt::Window);  在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &amp;#123;	m_s">
+<meta property="og:description" content="应用实例:搜索框创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&amp;gt;setWindowFlags(Qt::Window); 在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &amp;#123;	m_searc">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50">
-<meta property="og:updated_time" content="2018-04-07T07:19:02.609Z">
+<meta property="og:updated_time" content="2018-04-10T13:14:11.492Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qt-非模式对话框">
-<meta name="twitter:description" content="应用实例:搜索框  创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&amp;gt;setWindowFlags(Qt::Window);  在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &amp;#123;	m_s">
+<meta name="twitter:description" content="应用实例:搜索框创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&amp;gt;setWindowFlags(Qt::Window); 在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &amp;#123;	m_searc">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50">
 
 
@@ -244,9 +244,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -319,8 +353,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-04-07T15:19:02+08:00">
-                2018-04-07
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-10T21:14:11+08:00">
+                2018-04-10
               </time>
             
           </span>
@@ -350,6 +384,19 @@
           
 
           
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/Qt-非模式对话框.html#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="Qt-非模式对话框.html" itemprop="commentsCount"></span>
+                </a>
+              
+            
+          
 
           
           
@@ -378,7 +425,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  119
+                  137
                 </span>
               
 
@@ -415,18 +462,13 @@
       
 
       
-        <blockquote>
-<p>应用实例:<strong>搜索框</strong></p>
-</blockquote>
-<p>创建一个<strong>Widget</strong>对象，作为主窗体的成员变量<br><code>SearchWindow* m_SearchWin;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m_SearchWin=new SearchWindow(this);</span><br><span class="line">m_SearchWin-&gt;setWindowFlags(Qt::Window);</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>在用户执行搜索菜单时显示此窗口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int Text_7_4A::ShowSearch() &#123;</span><br><span class="line">	m_searchWin-&gt;show();</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>在搜索窗口内有动作时，在主窗口中相应此动作<br>需要将搜索类的<strong>ui</strong>成员变为<strong>public</strong>类型</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//响应小窗口内的动作</span><br><span class="line">	connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) );</span><br></pre></td></tr></table></figure>
-<h2 id="笔芯❤️"><a href="#笔芯❤️" class="headerlink" title="笔芯❤️"></a>笔芯<strong>❤️</strong></h2><p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>
+        <h4 id="应用实例-搜索框"><a href="#应用实例-搜索框" class="headerlink" title="应用实例:搜索框"></a>应用实例:<strong>搜索框</strong></h4><h5 id="创建一个Widget对象，作为主窗体的成员变量"><a href="#创建一个Widget对象，作为主窗体的成员变量" class="headerlink" title="创建一个Widget对象，作为主窗体的成员变量"></a>创建一个<strong>Widget</strong>对象，作为主窗体的成员变量</h5><p><code>SearchWindow* m_SearchWin;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m_SearchWin=new SearchWindow(this);</span><br><span class="line">m_SearchWin-&gt;setWindowFlags(Qt::Window);</span><br></pre></td></tr></table></figure></p>
+<h5 id="在用户执行搜索菜单时显示此窗口"><a href="#在用户执行搜索菜单时显示此窗口" class="headerlink" title="在用户执行搜索菜单时显示此窗口"></a>在用户执行搜索菜单时显示此窗口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int Text_7_4A::ShowSearch() &#123;</span><br><span class="line">	m_searchWin-&gt;show();</span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型"><a href="#在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型" class="headerlink" title="在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型"></a>在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的<strong>ui</strong>成员变为<strong>public</strong>类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//响应小窗口内的动作</span><br><span class="line">	connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) );</span><br></pre></td></tr></table></figure>
+<p>//响应小窗口内的动作<br>    connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) );</p>
+<p>笔芯<strong>❤️</strong></p>
+<hr>
+<p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>
 
       
     </div>
@@ -549,6 +591,15 @@
 
           
 
+  
+    <div class="comments" id="comments">
+      <div id="SOHUCS"></div>
+    </div>
+
+  
+
+
+
         </div>
         
           
@@ -597,7 +648,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -683,7 +734,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔芯❤️"><span class="nav-number">1.</span> <span class="nav-text">笔芯❤️</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#应用实例-搜索框"><span class="nav-number">1.</span> <span class="nav-text">应用实例:搜索框</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建一个Widget对象，作为主窗体的成员变量"><span class="nav-number">1.1.</span> <span class="nav-text">创建一个Widget对象，作为主窗体的成员变量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在用户执行搜索菜单时显示此窗口"><span class="nav-number">1.2.</span> <span class="nav-text">在用户执行搜索菜单时显示此窗口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型"><span class="nav-number">1.3.</span> <span class="nav-text">在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -717,7 +768,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.2k</span>
+    <span title="Site words total count">2.3k</span>
   
 </div>
 
@@ -899,6 +950,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('-1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 

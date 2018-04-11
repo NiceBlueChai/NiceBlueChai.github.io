@@ -1,224 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title>Qt-QLabe显示文字和图片</title>
-      <link href="/Qt-QLabe%E6%98%BE%E7%A4%BA%E6%96%87%E5%AD%97%E5%92%8C%E5%9B%BE%E7%89%87.html"/>
-      <url>/Qt-QLabe%E6%98%BE%E7%A4%BA%E6%96%87%E5%AD%97%E5%92%8C%E5%9B%BE%E7%89%87.html</url>
-      <content type="html"><![CDATA[<p><strong><a href="http://doc.qt.io/qt-5/qlabel.html" target="_blank" rel="noopener">QLabe Class参考文档</a></strong> </p><p><img src="http://upload-images.jianshu.io/upload_images/5804969-e44b6926fca028b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="示例图片.png"></p><blockquote><p>文字与图片的显示格式实际上是用<strong>Qt StyleSheet</strong>（样式表）设置的与css样式中的差不多</p></blockquote><ul><li>对齐方式</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-993d3520aaeb4965.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="对齐方式.PNG"></p><ul><li>是否换行</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-aa49526c35f8a0bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="是否换行.PNG"></p><ul><li>设置边框</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-0e54eafadb013e0d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="边框.PNG"></p><h3 id="显示LOGO-显示图片"><a href="#显示LOGO-显示图片" class="headerlink" title="显示LOGO(显示图片)"></a>显示LOGO(显示图片)</h3><ul><li><h5 id="添加图片资源"><a href="#添加图片资源" class="headerlink" title="添加图片资源"></a>添加图片资源</h5><p><img src="http://upload-images.jianshu.io/upload_images/5804969-53f30ccc964e31d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加图片资源.png"></p></li><li><h5 id="添加一个Labe用来显示图片"><a href="#添加一个Labe用来显示图片" class="headerlink" title="添加一个Labe用来显示图片"></a>添加一个Labe用来显示图片</h5></li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-2cce2fa18c90ff62.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="边框.PNG"></p><p><img src="http://upload-images.jianshu.io/upload_images/5804969-8fa48d881fabf796.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="❤️"><a href="#❤️" class="headerlink" title="❤️"></a><strong>❤️</strong></h2><p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>]]></content>
-      
+<search>
+  <entry>
+    <title><![CDATA[在Windows-Server上搭建Web服务器]]></title>
+    <url>%2F%E5%9C%A8Windows-Sever-%E4%B8%8A%E6%90%AD%E5%BB%BAWeb%E6%9C%8D%E5%8A%A1%E5%99%A8.html</url>
+    <content type="text"><![CDATA[两种方法： 安装IIS 安装Apache 安装IIS作为web服务器要求 安装WindowsSever系统（可使用虚拟机，要开启NAT服务） 将IP地址设置为静态的 计算机可以访问Internet+开放80端口，可用cmd命令netstat -an查看 注意：虚拟机上本地链接中网关要与虚拟机编辑-&gt;NAT服务中一致 在WindowsSever上安装IIS服务器管理 -&gt; 添加角色，按步骤安装安装后应有以下服务启动 打开后有一个默认网站 安装DNS服务，搭建DNS服务器添加正向查找区域访问时将本地连接属性中IPv4属性的DNS该为DNS服务器的ipv4地址使用域名访问时便可以解析到指定IP地址 限制网站宽带和连接数量一个服务器上可以放许多网站，而服务器的带宽是一定的为了保证服务器的性能与正常工作、每个网站的正常访问、每个用户的体验，需要对每个网站的带宽和网站并发连接数进行限制 右击 管理网站 高级设置 网站重定向简单的说，自动跳转网站与网页都可以重定向可以重定向到其他网站，也可以重定向到本站的其他页面和文件 定向到media 定向到百度 网站访问日志每次访问网站都会在日志中记录，可以在选项中选择记录项，记录的日志默认保存在…\inetpub\logs\LogFiles目录下 网站标识可在一个服务器上创建多个网站，区分他们的方法，使用网站标识： web服务器网卡绑定多的IP地址，每个网站使用不同的IP地址，太奢侈，因为公网IP资源紧张，不采用此方法 通过端口访问不同的网站，80端口为默认端口 绑定域名，通过域名访问网站 配置网站支持文件下载仅需要80端口在网站物理目录下新建一个media文件夹，放一些东西，访问该目录 要访问文件需要开启目录浏览 再次访问 要想让别人下载各种拓展名（格式）的文件需要配置MIME类型 保持会话连接网站使用TCP协议，每次连接建立会话需要三次握手，为了提高效率，一次建立会话后连接保持一定时间，不许要每次请求都进行三次握手浪费时间，访问量较大时保持连接很耗费服务器性能，取消连接超时则耗费带宽，根据情况选择。 MC地址与ARP欺骗网络执法官（控制本网段计算机的通信）、P2P终结者（控制本网段计算机上网带宽）这两个（流氓）软件通过arp欺骗进行“上网管理”，还可以通过arp欺骗捕获本网段计算机的账号密码，arp协议已在IPv6中停用 判断是否被arp欺骗当网络连接正常，但无法上网，而同网段其他计算机可以上网，可能是计算机受到攻击中病毒了，可通过命令行cmd查看arp -a,对比同网段其他计算机DNS缓存的MC地址，若不一样就是被ARP欺骗了。 解决方法 可通过命令行指令arp -s [ip] [mc]来设置dns服务器mc地址 可以通过修复网卡（修复网络连接）清除缓存的MC地址 注：只有使用IPv4协议并且使用**自动获取IP、自动获取DNS的计算机会遭到ARP欺骗❤️]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>服务器</category>
+        <category>Web服务器</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> QLabe </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>定时器Timer</title>
-      <link href="/%E5%AE%9A%E6%97%B6%E5%99%A8Timer.html"/>
-      <url>/%E5%AE%9A%E6%97%B6%E5%99%A8Timer.html</url>
-      <content type="html"><![CDATA[<h3 id="定时器用于实现定时操作，如："><a href="#定时器用于实现定时操作，如：" class="headerlink" title="定时器用于实现定时操作，如："></a>定时器用于实现定时操作，如：</h3><ul><li>每三分钟保存一次</li><li>每500毫秒闪烁一次</li><li>每1秒刷新一次界面<blockquote><p>新建Timer</p></blockquote></li></ul><h4 id="1-重写timeEvent-函数"><a href="#1-重写timeEvent-函数" class="headerlink" title="(1) 重写timeEvent()函数"></a>(1) 重写<strong>timeEvent()</strong>函数</h4><p>virtual void timerEvent ( QTimerEvent * event );<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 定时器处理函数</span><br><span class="line">void Test8_2A::timerEvent ( QTimerEvent * event )</span><br><span class="line">&#123;</span><br><span class="line">// 可以有多个定时器，每个的定时器有不同的</span><br><span class="line">处理</span><br><span class="line">  if(event‐&gt;timerId() == m_timerId)</span><br><span class="line">  &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h4 id="2-启动定时器，指定时间间隔"><a href="#2-启动定时器，指定时间间隔" class="headerlink" title="(2) 启动定时器，指定时间间隔"></a>(2) 启动定时器，指定时间间隔</h4><p>m_timerId=startTime(500);</p><blockquote><p>例子：实现一个文字时钟，显示系统当前时间 </p></blockquote><p><img src="http://upload-images.jianshu.io/upload_images/5804969-f12b9f703f74f0a5.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Timer_Event::Timer_Event(QWidget *parent)</span><br><span class="line">: QMainWindow(parent)</span><br><span class="line">&#123;</span><br><span class="line">ui.setupUi(this);</span><br><span class="line">m_timerId = startTimer(1000);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Timer_Event::timerEvent(QTimerEvent *event)</span><br><span class="line">&#123;</span><br><span class="line">if (event-&gt;timerId()==m_timerId)</span><br><span class="line">&#123;</span><br><span class="line">QTime now = QTime::currentTime();</span><br><span class="line">QString text = now.toString(&quot;HH:mm:ss ap&quot;);</span><br><span class="line">ui.labelTime-&gt;setText(text);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><p><strong>❤️</strong></p><hr><p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>]]></content>
-      
+      <tags>
+        <tag>Windows-Server</tag>
+        <tag>搭建Web服务器</tag>
+        <tag>服务器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt-QLabe显示文字和图片]]></title>
+    <url>%2FQt-QLabe%E6%98%BE%E7%A4%BA%E6%96%87%E5%AD%97%E5%92%8C%E5%9B%BE%E7%89%87.html</url>
+    <content type="text"><![CDATA[QLabe Class参考文档 文字与图片的显示格式实际上是用Qt StyleSheet（样式表）设置的与css样式中的差不多 对齐方式 是否换行 设置边框 显示LOGO(显示图片) 添加图片资源 添加一个Labe用来显示图片 ❤️]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> Timer </tag>
-            
-            <tag> 定时器 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Qt-使用工作线程</title>
-      <link href="/%E4%BD%BF%E7%94%A8%E5%B7%A5%E4%BD%9C%E7%BA%BF%E7%A8%8B.html"/>
-      <url>/%E4%BD%BF%E7%94%A8%E5%B7%A5%E4%BD%9C%E7%BA%BF%E7%A8%8B.html</url>
-      <content type="html"><![CDATA[<p>comments: false&gt;<strong>在Qt里，线程相关的类：</strong><br> QThread 线程<br> QMutex  互斥锁<br>QSemaphore 信号量</p><blockquote><p>“工作线程”:就是一个普通的线程,区别于”界面线程”<br>当一个事件处理可能需要较长时间,就创建一个工作线程处理它,以避免界面卡死.</p></blockquote><p></p><h3 href="#a1" id="a1"><strong>步骤:</strong></h3><br>(1) 启动一个工作线程<br>(2) 显示一个进度条或对等待话框<br>(3) 启动一个定时器,定时查询工作线程的进度和状态,在其完成之后,填满进度条、结束等待.<p></p><h4 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a><strong>创建线程</strong></h4><p>派生一个线程类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class MyThread : public QThread</span><br><span class="line">&#123;</span><br><span class="line">Q_OBJECT</span><br><span class="line">public:</span><br><span class="line">MyThread(QObject *parent);</span><br><span class="line">~MyThread();</span><br><span class="line">void run();   // 线程的入口函数</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p><blockquote><p>添加一些成员函数，用于查询任务的状态和进度 :<br>状态：int GetStatus();<br>已完成(1)<br>正在进行(0)<br>发生错误，已终止(‐1)<br>进度：int GetProgress();<br>0‐100</p></blockquote><h4 id="启动线程"><a href="#启动线程" class="headerlink" title="启动线程"></a><strong>启动线程</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MyTask* m_task = new MyTask();</span><br><span class="line">m_task‐&gt;start();</span><br></pre></td></tr></table></figure><h4 id="回收线程"><a href="#回收线程" class="headerlink" title="回收线程"></a><strong>回收线程</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m_task-&gt;wait();</span><br></pre></td></tr></table></figure>]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>QLabe</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[定时器Timer]]></title>
+    <url>%2F%E5%AE%9A%E6%97%B6%E5%99%A8Timer.html</url>
+    <content type="text"><![CDATA[定时器用于实现定时操作，如： 每三分钟保存一次 每500毫秒闪烁一次 每1秒刷新一次界面 新建Timer (1) 重写timeEvent()函数virtual void timerEvent ( QTimerEvent * event );123456789// 定时器处理函数void Test8_2A::timerEvent ( QTimerEvent * event )&#123;// 可以有多个定时器，每个的定时器有不同的处理 if(event‐&gt;timerId() == m_timerId) &#123; &#125;&#125; (2) 启动定时器，指定时间间隔m_timerId=startTime(500); 例子：实现一个文字时钟，显示系统当前时间 1234567891011121314151617Timer_Event::Timer_Event(QWidget *parent) : QMainWindow(parent)&#123; ui.setupUi(this); m_timerId = startTimer(1000);&#125;void Timer_Event::timerEvent(QTimerEvent *event)&#123; if (event-&gt;timerId()==m_timerId) &#123; QTime now = QTime::currentTime(); QString text = now.toString(&quot;HH:mm:ss ap&quot;); ui.labelTime-&gt;setText(text); &#125; &#125; ❤️]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> 线程 </tag>
-            
-            <tag> 工作线程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Qt的信号和槽</title>
-      <link href="/Qt%E7%9A%84%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD.html"/>
-      <url>/Qt%E7%9A%84%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD.html</url>
-      <content type="html"><![CDATA[<blockquote><p>信号和槽是Qt特有的信息传输驱动机制，是Qt程序设计中的重要基础，它可以让程序员在互不相干的对象之间建立联系。<br>  <strong>槽</strong>本质上是类的成员函数，其参数可以是任意类型，它与普通的C++成员函数几乎没有区别，它可以是虚函数；也可以被重载函数；可以是公有的、保护的或私有的，也可以被其它C++成员函数调用，和普通的类成员函数唯一不同的是：槽还可以和信号连接在一起，每当和槽连接的信号被发射时，就会自动调用这个槽。</p></blockquote><p><strong>connect()语法形式如下：</strong><br><code>connect(sender,SIGNAL(signal),receiver,SLOT(slot));</code><br>这里的sender是发送信号的对象的指针，receiver是包含槽的对象的指针，signal是被发送的信号，slot是接受信号的槽，他们都是不带参数的函数名。SIGNAL()宏和SLOT()宏会把他们的参数转换成相应的字符串。对于信号和槽，还具有以下特点。</p><h3 id="1-一个信号可以连接多个槽"><a href="#1-一个信号可以连接多个槽" class="headerlink" title="1.一个信号可以连接多个槽"></a>1.一个信号可以连接多个槽</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signal),receiver,SLOT(slotA));</span><br><span class="line">connect(sender,SIGNAL(signal),receiver,SLOT(slotB));</span><br></pre></td></tr></table></figure><p>当这一信号发射时，会以不确定的顺序一个接一个的调用这个信号连接的所有槽</p><h3 id="2-多个信号可以连接同一个槽"><a href="#2-多个信号可以连接同一个槽" class="headerlink" title="2.多个信号可以连接同一个槽"></a>2.多个信号可以连接同一个槽</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signalA),receiver,SLOT(slot));</span><br><span class="line">connect(sender,SIGNAL(signalB),receiver,SLOT(slot));</span><br></pre></td></tr></table></figure><p>无论哪个信号被发射，这个槽都会被调用</p><h3 id="3-一个信号可以连接另外一个信号"><a href="#3-一个信号可以连接另外一个信号" class="headerlink" title="3.一个信号可以连接另外一个信号"></a>3.一个信号可以连接另外一个信号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(signalA),receiver,SIGNAL(signalB));</span><br></pre></td></tr></table></figure><p>当信号A发射时，也会发射与它相连的信号B</p><h3 id="４-信号、槽之间的连接可以被移除"><a href="#４-信号、槽之间的连接可以被移除" class="headerlink" title="４.信号、槽之间的连接可以被移除"></a>４.信号、槽之间的连接可以被移除</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">disconnect(sender,SIGNAL(signal),receiver,SLOT(slot));</span><br></pre></td></tr></table></figure><p>因为删除对象时，Qt会自动移除和这个对象相关的所有连接，所以这个语法很少用到。</p><blockquote><p>除此之外，要把信号成功连接到槽（或者连接到另一个信号），还应该注意，相连接的信号和槽必须具有相同顺序相同类型的参数，如果信号的参数比它所连接的槽的参数多，那么多余的参数将被简单的忽略掉。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">connect(sender,SIGNAL(rawCommandReply(int,const QString &amp;)),</span><br><span class="line">receiver,SIGNAL(processReply(int , const QString &amp;)));</span><br></pre></td></tr></table></figure></p></blockquote><p>如果参数类型不匹配，或者信号或槽不存在，尽管应用程序调试构建可能会通过，但Qt会在运行时发出警告。<br>如果信号和槽的名字中包含了参数名，也会发生错误警告</p><blockquote><p>实际上这种机制是在QObject中实现的，这表明信号和槽并不仅仅局限于GUI编程中，实际上这种机制可以用于任何QObject的子类中，</p></blockquote><h3 id="在普通的类中使用信号和槽机制"><a href="#在普通的类中使用信号和槽机制" class="headerlink" title="在普通的类中使用信号和槽机制"></a><strong>在普通的类中使用信号和槽机制</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Class Circle:public QObject</span><br><span class="line">&#123;</span><br><span class="line">Q_ONJECT</span><br><span class="line">public:</span><br><span class="line">Circle()&#123;CircleRadius=0;&#125;</span><br><span class="line">int Radius()&#123;return CircleRadius;&#125;</span><br><span class="line">public slots:</span><br><span class="line">void setRadius(int newRadius);</span><br><span class="line">signals:</span><br><span class="line">void radiusChanged(int newRadius);</span><br><span class="line">private:</span><br><span class="line">int circleRadius;</span><br><span class="line">&#125;;</span><br><span class="line">void Circle::setRadius(int newRadius)</span><br><span class="line">&#123;</span><br><span class="line">if(newRadius!=circleRadius)</span><br><span class="line">&#123;</span><br><span class="line">circleRadius=newRadius;</span><br><span class="line">emit radiusChanged(circleRadius);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p><p style="font-weight:700"><br>来看一下，setRadius()槽是如何工作的。<br>仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged()信号。这样既可以确保信号和槽连接又不会导致无限循环。</p><h2 id=""><a href="#" class="headerlink" title=""></a><p></p></h2><p><strong>❤️我的目标是：someday，即便你花钱看我的文章，也会觉得心满意足</strong></p><hr><p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>Timer</tag>
+        <tag>定时器</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt-使用工作线程]]></title>
+    <url>%2F%E4%BD%BF%E7%94%A8%E5%B7%A5%E4%BD%9C%E7%BA%BF%E7%A8%8B.html</url>
+    <content type="text"><![CDATA[comments: false&gt;在Qt里，线程相关的类： QThread 线程 QMutex 互斥锁QSemaphore 信号量 “工作线程”:就是一个普通的线程,区别于”界面线程”当一个事件处理可能需要较长时间,就创建一个工作线程处理它,以避免界面卡死. 步骤:(1) 启动一个工作线程(2) 显示一个进度条或对等待话框(3) 启动一个定时器,定时查询工作线程的进度和状态,在其完成之后,填满进度条、结束等待. 创建线程派生一个线程类12345678class MyThread : public QThread&#123;Q_OBJECTpublic:MyThread(QObject *parent);~MyThread();void run(); // 线程的入口函数&#125;; 添加一些成员函数，用于查询任务的状态和进度 :状态：int GetStatus();已完成(1)正在进行(0)发生错误，已终止(‐1)进度：int GetProgress();0‐100 启动线程12MyTask* m_task = new MyTask();m_task‐&gt;start(); 回收线程1m_task-&gt;wait();]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> 信号和槽 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Qt-非模式对话框</title>
-      <link href="/Qt-%E9%9D%9E%E6%A8%A1%E5%BC%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.html"/>
-      <url>/Qt-%E9%9D%9E%E6%A8%A1%E5%BC%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.html</url>
-      <content type="html"><![CDATA[<h4 id="应用实例-搜索框"><a href="#应用实例-搜索框" class="headerlink" title="应用实例:搜索框"></a>应用实例:<strong>搜索框</strong></h4><h5 id="创建一个Widget对象，作为主窗体的成员变量"><a href="#创建一个Widget对象，作为主窗体的成员变量" class="headerlink" title="创建一个Widget对象，作为主窗体的成员变量"></a>创建一个<strong>Widget</strong>对象，作为主窗体的成员变量</h5><p><code>SearchWindow* m_SearchWin;</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m_SearchWin=new SearchWindow(this);</span><br><span class="line">m_SearchWin-&gt;setWindowFlags(Qt::Window);</span><br></pre></td></tr></table></figure></p><h5 id="在用户执行搜索菜单时显示此窗口"><a href="#在用户执行搜索菜单时显示此窗口" class="headerlink" title="在用户执行搜索菜单时显示此窗口"></a>在用户执行搜索菜单时显示此窗口</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int Text_7_4A::ShowSearch() &#123;</span><br><span class="line">m_searchWin-&gt;show();</span><br><span class="line"></span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h5 id="在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型"><a href="#在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型" class="headerlink" title="在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型"></a>在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的<strong>ui</strong>成员变为<strong>public</strong>类型</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//响应小窗口内的动作</span><br><span class="line">connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) );</span><br></pre></td></tr></table></figure><p>//响应小窗口内的动作<br>    connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) );</p><p>笔芯<strong>❤️</strong></p><hr><p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>线程</tag>
+        <tag>工作线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt的信号和槽]]></title>
+    <url>%2FQt%E7%9A%84%E4%BF%A1%E5%8F%B7%E5%92%8C%E6%A7%BD.html</url>
+    <content type="text"><![CDATA[信号和槽是Qt特有的信息传输驱动机制，是Qt程序设计中的重要基础，它可以让程序员在互不相干的对象之间建立联系。 槽本质上是类的成员函数，其参数可以是任意类型，它与普通的C++成员函数几乎没有区别，它可以是虚函数；也可以被重载函数；可以是公有的、保护的或私有的，也可以被其它C++成员函数调用，和普通的类成员函数唯一不同的是：槽还可以和信号连接在一起，每当和槽连接的信号被发射时，就会自动调用这个槽。 connect()语法形式如下：connect(sender,SIGNAL(signal),receiver,SLOT(slot));这里的sender是发送信号的对象的指针，receiver是包含槽的对象的指针，signal是被发送的信号，slot是接受信号的槽，他们都是不带参数的函数名。SIGNAL()宏和SLOT()宏会把他们的参数转换成相应的字符串。对于信号和槽，还具有以下特点。 1.一个信号可以连接多个槽12connect(sender,SIGNAL(signal),receiver,SLOT(slotA));connect(sender,SIGNAL(signal),receiver,SLOT(slotB)); 当这一信号发射时，会以不确定的顺序一个接一个的调用这个信号连接的所有槽 2.多个信号可以连接同一个槽12connect(sender,SIGNAL(signalA),receiver,SLOT(slot));connect(sender,SIGNAL(signalB),receiver,SLOT(slot)); 无论哪个信号被发射，这个槽都会被调用 3.一个信号可以连接另外一个信号1connect(sender,SIGNAL(signalA),receiver,SIGNAL(signalB)); 当信号A发射时，也会发射与它相连的信号B ４.信号、槽之间的连接可以被移除1disconnect(sender,SIGNAL(signal),receiver,SLOT(slot)); 因为删除对象时，Qt会自动移除和这个对象相关的所有连接，所以这个语法很少用到。 除此之外，要把信号成功连接到槽（或者连接到另一个信号），还应该注意，相连接的信号和槽必须具有相同顺序相同类型的参数，如果信号的参数比它所连接的槽的参数多，那么多余的参数将被简单的忽略掉。例如：12connect(sender,SIGNAL(rawCommandReply(int,const QString &amp;)),receiver,SIGNAL(processReply(int , const QString &amp;))); 如果参数类型不匹配，或者信号或槽不存在，尽管应用程序调试构建可能会通过，但Qt会在运行时发出警告。如果信号和槽的名字中包含了参数名，也会发生错误警告 实际上这种机制是在QObject中实现的，这表明信号和槽并不仅仅局限于GUI编程中，实际上这种机制可以用于任何QObject的子类中， 在普通的类中使用信号和槽机制123456789101112131415161718192021Class Circle:public QObject&#123; Q_ONJECT public: Circle()&#123;CircleRadius=0;&#125; int Radius()&#123;return CircleRadius;&#125; public slots: void setRadius(int newRadius); signals: void radiusChanged(int newRadius); private: int circleRadius;&#125;;void Circle::setRadius(int newRadius)&#123; if(newRadius!=circleRadius) &#123; circleRadius=newRadius; emit radiusChanged(circleRadius); &#125;&#125; 来看一下，setRadius()槽是如何工作的。仔细阅读会发现只有在newRadius不等于circleRadius的时候，才会发射radiusChanged()信号。这样既可以确保信号和槽连接又不会导致无限循环。 ❤️我的目标是：someday，即便你花钱看我的文章，也会觉得心满意足]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> 对话框 </tag>
-            
-            <tag> 非模式对话框 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Qt-模式对话框</title>
-      <link href="/Qt-%E6%A8%A1%E5%BC%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.html"/>
-      <url>/Qt-%E6%A8%A1%E5%BC%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.html</url>
-      <content type="html"><![CDATA[<p><strong> <a href="http://www.kuqin.com/qtdocument/qdialog.html" target="_blank" rel="noopener">QDialog类参考</a><br><img src="http://upload-images.jianshu.io/upload_images/5804969-e1e885c6d8a93620.gif?imageMogr2/auto-orient/strip" alt="演示"></strong></p><p>对话框：用于提示用户输入</p><p>####对话框分两种：</p><h5 id="（1）模式对话框Modal"><a href="#（1）模式对话框Modal" class="headerlink" title="（1）模式对话框Modal"></a>（1）模式对话框Modal</h5><p>背景界面卡住，用户必须完成对话框输入，关闭<br>对话框之后，才能回到背景界面</p><h5 id="（2）非模式对话框Non‐Modal"><a href="#（2）非模式对话框Non‐Modal" class="headerlink" title="（2）非模式对话框Non‐Modal"></a>（2）非模式对话框Non‐Modal</h5><p>背景界面可以活动。</p><h4 id="任务："><a href="#任务：" class="headerlink" title="任务："></a><strong>任务：</strong></h4><p><strong>点登录按钮，弹出对话框提示用户输入。用户点“确认”或“取消”后，回到主界面。</strong></p><h5 id="1-新建对话框，布局"><a href="#1-新建对话框，布局" class="headerlink" title="(1)新建对话框，布局"></a>(1)新建对话框，布局</h5><h5 id="2-点确定时，accept-对话框返回"><a href="#2-点确定时，accept-对话框返回" class="headerlink" title="(2)点确定时，accept() 对话框返回"></a>(2)点确定时，accept() 对话框返回</h5><p>点取消时，reject()对话框返回<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int LoginDlg::OnbtnOK() &#123;</span><br><span class="line">    //取得用户的输入</span><br><span class="line">m_user = ui.TextUser-&gt;text();</span><br><span class="line">m_password = ui.TextPassword-&gt;text();</span><br><span class="line"></span><br><span class="line">accept();//关闭对话框，并返回Accepted</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br><span class="line">int LoginDlg::OnbtnCancel() &#123;</span><br><span class="line">//用户取消</span><br><span class="line">reject();</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h5 id="3-运行对话框-exec-，注意exec-的返回值"><a href="#3-运行对话框-exec-，注意exec-的返回值" class="headerlink" title="(3) 运行对话框 exec()，注意exec()的返回值"></a>(3) 运行对话框 exec()，注意exec()的返回值</h5><h5 id="4-取得用户输入"><a href="#4-取得用户输入" class="headerlink" title="(4) 取得用户输入"></a>(4) 取得用户输入</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int QtLog_01::OnbtnOK_1() &#123;</span><br><span class="line">//使用对话框</span><br><span class="line">LoginDlg dlg;</span><br><span class="line">int ret=dlg.exec();//对话框显示，程序阻塞</span><br><span class="line">if (ret == QDialog::Accepted) &#123;</span><br><span class="line">qDebug()&lt;&lt; dlg.m_user &lt;&lt; dlg.m_password;//调试输出</span><br><span class="line">&#125;</span><br><span class="line">else &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><a href="https://share.weiyun.com/787e93746981807c38941d725b7414c4" target="_blank" rel="noopener">源码下载</a></p><h2 id="❤️"><a href="#❤️" class="headerlink" title="❤️"></a><p style="font-size:10rem; text-align:center">❤️</p></h2>]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>信号和槽</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt-非模式对话框]]></title>
+    <url>%2FQt-%E9%9D%9E%E6%A8%A1%E5%BC%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.html</url>
+    <content type="text"><![CDATA[应用实例:搜索框创建一个Widget对象，作为主窗体的成员变量SearchWindow* m_SearchWin;12m_SearchWin=new SearchWindow(this);m_SearchWin-&gt;setWindowFlags(Qt::Window); 在用户执行搜索菜单时显示此窗口12345int Text_7_4A::ShowSearch() &#123; m_searchWin-&gt;show(); return 0;&#125; 在搜索窗口内有动作时，在主窗口中相应此动作需要将搜索类的ui成员变为public类型12//响应小窗口内的动作 connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) ); //响应小窗口内的动作 connect(m_searchWin-&gt;ui.btnStartSearch, SIGNAL(clicked()), this, SLOT(OnStartSearch()) ); 笔芯❤️]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> 对话框 </tag>
-            
-            <tag> 模式对话框 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Qt-文件对话框</title>
-      <link href="/Qt-%E6%96%87%E4%BB%B6%E5%AF%B9%E8%AF%9D%E6%A1%86.html"/>
-      <url>/Qt-%E6%96%87%E4%BB%B6%E5%AF%B9%E8%AF%9D%E6%A1%86.html</url>
-      <content type="html"><![CDATA[<h4 id="QFileDialog类参考"><a href="#QFileDialog类参考" class="headerlink" title="QFileDialog类参考"></a><a href="http://www.kuqin.com/qtdocument/qfiledialog.html" target="_blank" rel="noopener">QFileDialog类参考</a></h4><p><img src="http://upload-images.jianshu.io/upload_images/5804969-c39dca41fcb1fc55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="示例演示"></p><h4 id="选择打开文件"><a href="#选择打开文件" class="headerlink" title="选择打开文件"></a>选择打开文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int QtFile_01::OnClickbtnOpen() &#123;</span><br><span class="line">//选择要打开的文件</span><br><span class="line">QString fileName = QFileDialog::getOpenFileName(this,</span><br><span class="line">GBK::ToUnicode(&quot;Open File打开文件&quot;),//标题</span><br><span class="line">&quot;&quot;,</span><br><span class="line">tr(&quot;(*)&quot;));//限制文件类型</span><br><span class="line"></span><br><span class="line">//为空时表明用户取消了操作</span><br><span class="line">if (fileName.length() &gt; 0) &#123;</span><br><span class="line">qDebug() &lt;&lt; fileName;</span><br><span class="line">//Unicode(QString) -&gt; GBK(string)</span><br><span class="line">string gbk_name = GBK::FromUnicode(fileName);</span><br><span class="line"></span><br><span class="line">//打开文件,读取内容</span><br><span class="line">FILE* fp;</span><br><span class="line">fopen_s(&amp;fp, gbk_name.c_str(), &quot;rb&quot;);</span><br><span class="line"></span><br><span class="line">//获取文件大小</span><br><span class="line">fseek(fp, 0, SEEK_END);</span><br><span class="line">int filesize = ftell(fp);</span><br><span class="line"></span><br><span class="line">//读取内容</span><br><span class="line">fseek(fp, 0, SEEK_SET);</span><br><span class="line">char* buf = new char[filesize + 1];</span><br><span class="line">int n = fread(buf,1, filesize, fp);</span><br><span class="line">if (n &gt; 0) &#123;</span><br><span class="line">buf[n] = 0;</span><br><span class="line">//显示文本</span><br><span class="line">ui.plainTextEdit-&gt;setPlainText(GBK::ToUnicode(buf));</span><br><span class="line">&#125;</span><br><span class="line">//释放内存，关闭界面</span><br><span class="line">delete[]buf;</span><br><span class="line">fclose(fp);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="保存文件"><a href="#保存文件" class="headerlink" title="保存文件"></a>保存文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">int QtFile_01::OnClickbtnSave() </span><br><span class="line">&#123;</span><br><span class="line">//选择要保存的位置</span><br><span class="line">QString fileName = QFileDialog::getSaveFileName(this, //父窗口</span><br><span class="line">GBK::ToUnicode(&quot;保存文件&quot;),</span><br><span class="line">&quot;/&quot;);</span><br><span class="line"></span><br><span class="line">//若为空表明用户取消了操作</span><br><span class="line">if (fileName.length() &gt; 0) </span><br><span class="line">&#123;</span><br><span class="line">//获取文本框中的内容</span><br><span class="line">QString text = ui.plainTextEdit-&gt;toPlainText();</span><br><span class="line">//Unicode(QString) -&gt; GBK(string)</span><br><span class="line">string gbk_name = GBK::FromUnicode(fileName);</span><br><span class="line">string gbk_text = GBK::FromUnicode(text);</span><br><span class="line"></span><br><span class="line">//打开文件</span><br><span class="line">FILE* fp;</span><br><span class="line">fopen_s(&amp;fp, gbk_name.c_str(), &quot;wb&quot;);</span><br><span class="line">//写入文件</span><br><span class="line">fwrite(gbk_text.c_str(), 1, gbk_text.length(), fp);</span><br><span class="line">//关闭文件</span><br><span class="line">fclose(fp);</span><br><span class="line">&#125;</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><p style="text-align:center;font-size:1.5rem">文中<strong>ToUnicode()</strong>及<strong>FromUnicode</strong>均为封装好的函数，详见<a href="http://www.jianshu.com/p/52b709163b26" target="_blank" rel="noopener">VC下字符编码转换</a></p>]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>对话框</tag>
+        <tag>非模式对话框</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt-模式对话框]]></title>
+    <url>%2FQt-%E6%A8%A1%E5%BC%8F%E5%AF%B9%E8%AF%9D%E6%A1%86.html</url>
+    <content type="text"><![CDATA[QDialog类参考 对话框：用于提示用户输入 ####对话框分两种： （1）模式对话框Modal背景界面卡住，用户必须完成对话框输入，关闭对话框之后，才能回到背景界面 （2）非模式对话框Non‐Modal背景界面可以活动。 任务：点登录按钮，弹出对话框提示用户输入。用户点“确认”或“取消”后，回到主界面。 (1)新建对话框，布局(2)点确定时，accept() 对话框返回点取消时，reject()对话框返回12345678910111213int LoginDlg::OnbtnOK() &#123; //取得用户的输入 m_user = ui.TextUser-&gt;text(); m_password = ui.TextPassword-&gt;text(); accept();//关闭对话框，并返回Accepted return 0;&#125;int LoginDlg::OnbtnCancel() &#123; //用户取消 reject(); return 0;&#125; (3) 运行对话框 exec()，注意exec()的返回值(4) 取得用户输入123456789101112int QtLog_01::OnbtnOK_1() &#123; //使用对话框 LoginDlg dlg; int ret=dlg.exec();//对话框显示，程序阻塞 if (ret == QDialog::Accepted) &#123; qDebug()&lt;&lt; dlg.m_user &lt;&lt; dlg.m_password;//调试输出 &#125; else &#123; &#125; return 0;&#125; 源码下载 ❤️]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> 对话框 </tag>
-            
-            <tag> 文件对话框 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Qt-QLabe显示文字和图片</title>
-      <link href="/Qt-QLabeshowtextandimages.html"/>
-      <url>/Qt-QLabeshowtextandimages.html</url>
-      <content type="html"><![CDATA[<p><a href="http://doc.qt.io/qt-5/qlabel.html" target="_blank" rel="noopener">QLabe Class参考文档</a></p><p><img src="http://upload-images.jianshu.io/upload_images/5804969-e44b6926fca028b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="示例图片.png"></p><blockquote><p>文字与图片的显示格式实际上是用<strong>Qt StyleSheet</strong>（样式表）设置的<br>与css样式中的差不多</p></blockquote><ul><li>对齐方式</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-993d3520aaeb4965.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="对齐方式.PNG"></p><ul><li>是否换行</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-aa49526c35f8a0bd.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="是否换行.PNG"></p><ul><li>设置边框</li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-0e54eafadb013e0d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="边框.PNG"></p><blockquote><p>显示LOGO(显示图片)</p></blockquote><ul><li><p>添加图片资源<br><img src="http://upload-images.jianshu.io/upload_images/5804969-53f30ccc964e31d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="添加图片资源.png"></p></li><li><p>添加一个Labe用来显示图片</p></li></ul><p><img src="http://upload-images.jianshu.io/upload_images/5804969-2cce2fa18c90ff62.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="边框.PNG"></p><p><img src="http://upload-images.jianshu.io/upload_images/5804969-8fa48d881fabf796.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><h2 id="❤️"><a href="#❤️" class="headerlink" title="❤️"></a><strong>❤️</strong></h2><p><img src="http://upload-images.jianshu.io/upload_images/5804969-64ca917b7b70f881.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" alt=""></p>]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>对话框</tag>
+        <tag>模式对话框</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt-文件对话框]]></title>
+    <url>%2FQt-%E6%96%87%E4%BB%B6%E5%AF%B9%E8%AF%9D%E6%A1%86.html</url>
+    <content type="text"><![CDATA[QFileDialog类参考 选择打开文件12345678910111213141516171819202122232425262728293031323334353637int QtFile_01::OnClickbtnOpen() &#123; //选择要打开的文件 QString fileName = QFileDialog::getOpenFileName(this, GBK::ToUnicode(&quot;Open File打开文件&quot;),//标题 &quot;&quot;, tr(&quot;(*)&quot;));//限制文件类型 //为空时表明用户取消了操作 if (fileName.length() &gt; 0) &#123; qDebug() &lt;&lt; fileName; //Unicode(QString) -&gt; GBK(string) string gbk_name = GBK::FromUnicode(fileName); //打开文件,读取内容 FILE* fp; fopen_s(&amp;fp, gbk_name.c_str(), &quot;rb&quot;); //获取文件大小 fseek(fp, 0, SEEK_END); int filesize = ftell(fp); //读取内容 fseek(fp, 0, SEEK_SET); char* buf = new char[filesize + 1]; int n = fread(buf,1, filesize, fp); if (n &gt; 0) &#123; buf[n] = 0; //显示文本 ui.plainTextEdit-&gt;setPlainText(GBK::ToUnicode(buf)); &#125; //释放内存，关闭界面 delete[]buf; fclose(fp); &#125; return 0;&#125; 保存文件123456789101112131415161718192021222324252627int QtFile_01::OnClickbtnSave() &#123; //选择要保存的位置 QString fileName = QFileDialog::getSaveFileName(this, //父窗口 GBK::ToUnicode(&quot;保存文件&quot;), &quot;/&quot;); //若为空表明用户取消了操作 if (fileName.length() &gt; 0) &#123; //获取文本框中的内容 QString text = ui.plainTextEdit-&gt;toPlainText(); //Unicode(QString) -&gt; GBK(string) string gbk_name = GBK::FromUnicode(fileName); string gbk_text = GBK::FromUnicode(text); //打开文件 FILE* fp; fopen_s(&amp;fp, gbk_name.c_str(), &quot;wb&quot;); //写入文件 fwrite(gbk_text.c_str(), 1, gbk_text.length(), fp); //关闭文件 fclose(fp); &#125; return 0;&#125; 文中ToUnicode()及FromUnicode均为封装好的函数，详见VC下字符编码转换]]></content>
       <categories>
-          
-          <category> Qt </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Qt </tag>
-            
-            <tag> QLabe </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/hello-world.html"/>
-      <url>/hello-world.html</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p><p><div id="disqus_thread"></div></p><script>*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/var disqus_config = function () {this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variablethis.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable};(function() { // DON'T EDIT BELOW THIS LINEvar d = document, s = d.createElement('script');s.src = 'https://nicebluechai.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>    <!--PC和WAP自适应版--><div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div> <script type="text/javascript"> (function(){ var appid = 'cytu1mJqc'; var conf = 'prod_724639f82a7493e5cc3377fc5c98c32b'; var width = window.innerWidth || document.documentElement.clientWidth; if (width < 960) { window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>                        ]]></content>
-      
+      <tags>
+        <tag>Qt</tag>
+        <tag>对话框</tag>
+        <tag>文件对话框</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Qt-QLabe显示文字和图片]]></title>
+    <url>%2FQt-QLabeshowtextandimages.html</url>
+    <content type="text"><![CDATA[QLabe Class参考文档 文字与图片的显示格式实际上是用Qt StyleSheet（样式表）设置的与css样式中的差不多 对齐方式 是否换行 设置边框 显示LOGO(显示图片) 添加图片资源 添加一个Labe用来显示图片 ❤️]]></content>
       <categories>
-          
-          <category> 第一篇 </category>
-          
-          <category> Test </category>
-          
+        <category>Qt</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 英文 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-  
-  
+      <tags>
+        <tag>Qt</tag>
+        <tag>QLabe</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2Fhello-world.html</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/ var disqus_config = function () { this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable }; (function() { // DON'T EDIT BELOW THIS LINE var d = document, s = d.createElement('script'); s.src = 'https://nicebluechai.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); Please enable JavaScript to view the comments powered by Disqus. (function(){ var appid = 'cytu1mJqc'; var conf = 'prod_724639f82a7493e5cc3377fc5c98c32b'; var width = window.innerWidth || document.documentElement.clientWidth; if (width < 960) { window.document.write(''); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })();]]></content>
+      <categories>
+        <category>第一篇</category>
+        <category>Test</category>
+      </categories>
+      <tags>
+        <tag>英文</tag>
+      </tags>
+  </entry>
 </search>

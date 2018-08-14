@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://NIceBlueChai.cn/bullhorn/index.html</loc>
+    
+    <lastmod>2018-08-14T13:30:35.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://NIceBlueChai.cn/book/index.html</loc>
     
     <lastmod>2018-08-14T12:49:35.449Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://NIceBlueChai.cn/bitcoin/index.html</loc>
     
     <lastmod>2018-04-13T11:07:19.790Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://NIceBlueChai.cn/bullhorn/index.html</loc>
-    
-    <lastmod>2018-04-13T07:02:35.172Z</lastmod>
     
   </url>
   

@@ -3,6 +3,63 @@
 
 
     
+  <url>
+    <loc>https://blog.nicebluechai.cn/FirstScrapyproject.html</loc>
+    <lastmod>2018-08-14T14:56:17.455Z</lastmod>
+    <data>
+        <display>
+        <title>第一个Scrapy项目</title>
+        <pubTime>2018-08-14T14:55:00.645Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>python</tag>
+         
+        <tag>爬虫，Scrapy</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://blog.nicebluechai.cn/categories/Python/"/>
+          
+             
+              <breadCrumb title="爬虫" url="https://blog.nicebluechai.cn/categories/Python/%E7%88%AC%E8%99%AB/"/>
+          
+             
+              <breadCrumb title="Scrapy" url="https://blog.nicebluechai.cn/categories/Python/%E7%88%AC%E8%99%AB/Scrapy/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.nicebluechai.cn/Python%E7%88%AC%E5%8F%96%E5%B0%8F%E8%AF%B4%E3%80%8A%E5%BF%83%E7%90%86%E7%BD%AA%E5%9F%8E%E5%B8%82%E4%B9%8B%E5%85%89%E3%80%8B.html</loc>
+    <lastmod>2018-08-14T14:53:35.014Z</lastmod>
+    <data>
+        <display>
+        <title>Python爬取小说《心里最城市之光》</title>
+        <pubTime>2018-08-14T14:50:40.770Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>python</tag>
+         
+        <tag>爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="Python" url="https://blog.nicebluechai.cn/categories/Python/"/>
+          
+             
+              <breadCrumb title="爬虫" url="https://blog.nicebluechai.cn/categories/Python/%E7%88%AC%E8%99%AB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
     
     

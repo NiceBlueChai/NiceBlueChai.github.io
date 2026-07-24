@@ -1,0 +1,4 @@
+# 本地依赖、构建产物和临时文件。
+node_modules/
+dist/
+*.log

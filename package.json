@@ -1,0 +1,12 @@
+{
+    "//": "月度资源整合网站的开发、测试与构建命令。",
+    "name": "cf-monthly-resources",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "test": "node --test",
+        "build": "node scripts/build.mjs",
+        "serve": "node scripts/serve.mjs"
+    }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<!-- 七月资源整合详情页。 -->
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="七月资源整合 v1.3：游戏、软件、工具和学习资源目录。">
+    <meta name="theme-color" content="#f7f1e5">
+    <title>七月资源整合计划 · v1.3</title>
+    <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body data-page="issue">
+    <main class="site-shell issue-page">
+        <header class="site-header">
+            <a class="brand" href="/">月度资源整合</a>
+            <nav aria-label="主导航">
+                <a class="nav-current" href="/2026/07/">2026.07</a>
+                <a href="/#history">历史月份</a>
+            </nav>
+        </header>
+
+        <nav class="breadcrumb" aria-label="面包屑">
+            <a href="/">首页</a><span>/</span><span>2026</span><span>/</span><span>07</span>
+        </nav>
+
+        <section class="issue-intro" aria-labelledby="issue-title">
+            <h1 id="issue-title">七月资源整合计划</h1>
+            <p class="issue-meta">
+                v<span data-issue-version>1.3</span>
+                <span aria-hidden="true">·</span>
+                <time datetime="2026-07-02" data-issue-date>2026.07.02</time>
+                <span aria-hidden="true">·</span>
+                <span data-issue-author>小没妹妹</span>
+                <span aria-hidden="true">·</span>
+                本版本收录 <strong data-resource-count>81</strong> 条资源
+            </p>
+            <p class="issue-description" data-issue-description>
+                逐项核对页面可访问状态，并为每条资源补充简介、来源与视觉素材。第三方页面仅作信息索引。
+            </p>
+        </section>
+
+        <aside class="safety-notice">
+            <span aria-hidden="true">●</span>
+            <p>下载时请留意广告、下载路径与安装包名；第三方来源不代表安全背书。</p>
+        </aside>
+
+        <section class="controls" aria-label="资源筛选">
+            <label class="search-field">
+                <span class="search-field__icon" aria-hidden="true">⌕</span>
+                <span class="sr-only">搜索资源</span>
+                <input type="search" data-search placeholder="搜索标题、简介或来源" autocomplete="off">
+            </label>
+            <label class="version-field">
+                <span class="sr-only">选择版本</span>
+                <select data-version aria-label="选择版本"></select>
+            </label>
+            <button class="button button--secondary" type="button" data-copy-share>复制本期链接</button>
+        </section>
+
+        <div class="category-list" data-categories aria-label="分类筛选"></div>
+
+        <div class="result-heading">
+            <h2>资源列表</h2>
+            <p aria-live="polite"><strong data-result-count>0</strong> 条结果</p>
+        </div>
+
+        <section class="resource-grid" data-resource-grid aria-label="资源列表"></section>
+
+        <footer class="issue-footer">
+            <p>分享地址会保留版本、分类与搜索条件。</p>
+            <p>最近核对：<time datetime="2026-07-24" data-checked-at>2026.07.24</time></p>
+        </footer>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast hidden></div>
+
+    <noscript>
+        <p class="noscript-message">需要启用 JavaScript 才能加载资源列表和筛选功能。</p>
+    </noscript>
+
+    <script type="module" src="/assets/app.mjs"></script>
+</body>
+</html>

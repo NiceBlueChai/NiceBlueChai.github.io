@@ -98,3 +98,70 @@ export function buildShareUrl(baseUrl, state) {
 export function escapeHtml(value) {
     return String(value ?? "").replace(/[&<>"']/g, (character) => HTML_ESCAPES[character]);
 }
+
+/**
+ * 渲染单个资源卡片。
+ *
+ * @param {object} resource 资源记录。
+ * @returns {string} 安全的卡片 HTML。
+ */
+export function renderResourceCard(resource) {
+    const title = escapeHtml(resource.title);
+    const summary = escapeHtml(resource.summary);
+    const category = escapeHtml(resource.category);
+    const domain = escapeHtml(resource.sourceDomain);
+    const sourceLabel = resource.sourceType === "official" ? "官方" : "第三方";
+    const statusLabel = resource.status === "available" ? "" : "<span class=\"status-badge\">暂不可用</span>";
+    const image = resource.image
+        ? `<img src="${escapeHtml(resource.image)}" alt="" loading="lazy" decoding="async">`
+        : `<span class="resource-visual__glyph" aria-hidden="true">${category.slice(0, 1)}</span>
+            <span class="resource-visual__label">IMAGE SLOT</span>`;
+    const openAction = resource.status === "available"
+        ? `<a class="text-action text-action--primary" href="${escapeHtml(resource.canonicalUrl || resource.url)}"
+                target="_blank" rel="noopener noreferrer nofollow">打开链接</a>`
+        : "";
+    const copyLabel = resource.status === "available" ? "复制链接" : "复制原始链接";
+
+    return `
+        <article class="resource-card" data-resource-id="${escapeHtml(resource.id)}">
+            <div class="resource-visual resource-visual--${escapeHtml(resource.imageKind)}">
+                ${image}
+            </div>
+            <div class="resource-card__body">
+                <div class="resource-card__badges">
+                    <span>${category}</span>
+                    <span class="source-badge source-badge--${escapeHtml(resource.sourceType)}">${sourceLabel}</span>
+                    ${statusLabel}
+                </div>
+                <h3>${title}</h3>
+                <p class="resource-card__summary">${summary}</p>
+                <p class="resource-card__domain">${domain} · 核对于 ${escapeHtml(resource.checkedAt)}</p>
+                <div class="resource-card__actions">
+                    ${openAction}
+                    <button class="text-action" type="button"
+                            data-copy-url="${escapeHtml(resource.url)}">${copyLabel}</button>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+/**
+ * 渲染资源结果列表或空状态。
+ *
+ * @param {Array<object>} resources 当前筛选结果。
+ * @returns {string} 结果网格 HTML。
+ */
+export function renderResourceGrid(resources) {
+    if (resources.length === 0) {
+        return `
+            <section class="empty-state" aria-labelledby="empty-title">
+                <h2 id="empty-title">没有找到匹配资源</h2>
+                <p>尝试缩短关键词，或清除当前分类筛选。</p>
+                <button class="button button--secondary" type="button" data-clear-filters>清除筛选</button>
+            </section>
+        `;
+    }
+
+    return resources.map(renderResourceCard).join("");
+}

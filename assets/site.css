@@ -191,6 +191,10 @@ img {
     border-color: var(--accent);
 }
 
+.home-mobile-enter {
+    display: none;
+}
+
 .button:hover,
 .text-action:hover,
 .category-chip:hover {
@@ -319,6 +323,10 @@ img {
 
 .issue-intro h1 {
     font-size: clamp(40px, 4vw, 52px);
+}
+
+.issue-intro h1 span {
+    display: inline;
 }
 
 .issue-description {
@@ -700,7 +708,12 @@ img {
         font-size: 126px;
     }
 
-    .home-copy .button {
+    .home-desktop-enter {
+        display: none;
+    }
+
+    .home-mobile-enter {
+        display: inline-flex;
         width: 100%;
     }
 
@@ -728,6 +741,10 @@ img {
         max-width: 300px;
         font-size: 38px;
         line-height: 1.55;
+    }
+
+    .issue-intro h1 span {
+        display: block;
     }
 
     .issue-description {

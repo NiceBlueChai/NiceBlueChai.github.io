@@ -1,0 +1,9 @@
+<!-- 月度资源整合网站的月刊日历图标。 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="16" fill="#181715"/>
+    <rect x="8" y="10" width="48" height="44" rx="10" fill="#f7f1e5"/>
+    <path d="M8 20a10 10 0 0 1 10-10h28a10 10 0 0 1 10 10v5H8z" fill="#b82c22"/>
+    <path d="M20 7v9M44 7v9" stroke="#f7f1e5" stroke-width="5" stroke-linecap="round"/>
+    <rect x="17" y="31" width="13" height="13" rx="3" fill="#b82c22"/>
+    <path d="M37 32h10M37 39h10M17 49h30" stroke="#181715" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -18,6 +18,11 @@ test("构建生成 Cloudflare Pages 页面和静态资源", () => {
     assert.equal(existsSync("dist/2026/07/index.html"), true);
     assert.equal(existsSync("dist/assets/app.mjs"), true);
     assert.equal(existsSync("dist/assets/catalog.mjs"), true);
+    assert.equal(existsSync("dist/assets/favicon.svg"), true);
+
+    for (const page of ["dist/index.html", "dist/2026/07/index.html"]) {
+        assert.match(readFileSync(page, "utf8"), /<link rel="icon" href="\/assets\/favicon\.svg"/);
+    }
 });
 
 test("Worker 部署配置声明名称、兼容日期和静态资源目录", () => {

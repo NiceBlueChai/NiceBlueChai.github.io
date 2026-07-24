@@ -4,7 +4,7 @@
 
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { existsSync, rmSync } from "node:fs";
+import { existsSync, readFileSync, rmSync } from "node:fs";
 import test from "node:test";
 
 test("构建生成 Cloudflare Pages 页面和静态资源", () => {
@@ -18,4 +18,15 @@ test("构建生成 Cloudflare Pages 页面和静态资源", () => {
     assert.equal(existsSync("dist/2026/07/index.html"), true);
     assert.equal(existsSync("dist/assets/app.mjs"), true);
     assert.equal(existsSync("dist/assets/catalog.mjs"), true);
+});
+
+test("Worker 部署配置声明名称、兼容日期和静态资源目录", () => {
+    assert.equal(existsSync("wrangler.jsonc"), true, "缺少 wrangler.jsonc");
+
+    const source = readFileSync("wrangler.jsonc", "utf8").replace(/^\s*\/\/.*\r?\n/, "");
+    const config = JSON.parse(source);
+
+    assert.equal(config.name, "blue-surf-97a1");
+    assert.match(config.compatibility_date, /^\d{4}-\d{2}-\d{2}$/);
+    assert.equal(config.assets.directory, "./dist");
 });

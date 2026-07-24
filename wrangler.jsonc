@@ -1,0 +1,8 @@
+// Cloudflare Workers 静态资源部署配置。
+{
+    "name": "blue-surf-97a1",
+    "compatibility_date": "2026-07-24",
+    "assets": {
+        "directory": "./dist"
+    }
+}

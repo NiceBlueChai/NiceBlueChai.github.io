@@ -28,6 +28,7 @@
 - Create: `assets/catalog.mjs`
 - Create: `assets/core.mjs`
 - Create: `tests/core.test.mjs`
+- Create: `tests/catalog.test.mjs`
 
 **Interfaces:**
 - Produces: `issues`, `getLatestIssue()`, `selectVersion()`, `filterResources()`, `readQuery()`,
@@ -67,6 +68,12 @@ test("分享地址保留版本、分类和搜索词", () => {
         "https://example.com/2026/07/?v=1.3&category=game&q=%E6%B5%8F%E8%A7%88%E5%99%A8"
     );
 });
+
+test("七月 v1.3 包含 81 条唯一资源", () => {
+    const issue = issues[0];
+    assert.equal(issue.resources.length, 81);
+    assert.equal(new Set(issue.resources.map((row) => row.id)).size, 81);
+});
 ```
 
 - [ ] **Step 2: 运行测试并确认因模块不存在而失败**
@@ -94,7 +101,7 @@ export function filterResources(resources, state) {
 - [ ] **Step 4: 运行测试并确认通过**
 
 Run: `npm test`
-Expected: 4 tests pass.
+Expected: 5 tests pass.
 
 ### Task 2: 页面渲染与浏览器交互
 
@@ -152,26 +159,26 @@ Expected: all tests pass.
 - Create: `scripts/serve.mjs`
 - Create: `.gitignore`
 - Create: `README.md`
-- Create: `tests/catalog.test.mjs`
+- Create: `tests/build.test.mjs`
 
 **Interfaces:**
 - Consumes: 源 HTML、CSS、模块和图片。
 - Produces: `dist/` Cloudflare Pages 静态目录和本地预览服务。
 
-- [ ] **Step 1: 写失败的目录完整性测试**
+- [ ] **Step 1: 写失败的静态构建测试**
 
 ```javascript
-test("七月 v1.3 包含 81 条唯一资源", () => {
-    const issue = issues[0];
-    assert.equal(issue.resources.length, 81);
-    assert.equal(new Set(issue.resources.map((row) => row.id)).size, 81);
+test("构建生成 Cloudflare Pages 入口", () => {
+    execFileSync(process.execPath, ["scripts/build.mjs"]);
+    assert.equal(existsSync("dist/index.html"), true);
+    assert.equal(existsSync("dist/2026/07/index.html"), true);
 });
 ```
 
-- [ ] **Step 2: 运行测试并确认当前不完整数据会失败**
+- [ ] **Step 2: 运行测试并确认缺少构建脚本会失败**
 
-Run: `node --test tests/catalog.test.mjs`
-Expected: FAIL until all 81 records are present and unique.
+Run: `node --test tests/build.test.mjs`
+Expected: FAIL because `scripts/build.mjs` does not exist.
 
 - [ ] **Step 3: 完成资源素材、构建脚本和 Cloudflare 说明**
 

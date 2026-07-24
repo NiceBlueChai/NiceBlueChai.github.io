@@ -13,6 +13,7 @@ await Promise.all([
     copyFile("index.html", resolve(output, "index.html")),
     copyFile("_headers", resolve(output, "_headers")),
     cp("2026", resolve(output, "2026"), { recursive: true }),
+    cp("about", resolve(output, "about"), { recursive: true }),
     cp("assets", resolve(output, "assets"), { recursive: true })
 ]);
 

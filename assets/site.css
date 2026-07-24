@@ -80,35 +80,98 @@ img {
 .site-shell {
     width: min(var(--content-width), calc(100% - 40px));
     margin-inline: auto;
-    padding-block: 48px 64px;
+    padding-block: 32px 64px;
 }
 
 .site-header {
     display: flex;
-    min-height: 48px;
+    height: 72px;
     align-items: center;
     justify-content: space-between;
 }
 
+.site-header__brand-row {
+    display: flex;
+    align-items: center;
+}
+
 .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     font-family: var(--font-serif);
     font-size: 20px;
     font-weight: 700;
 }
 
-.site-header nav {
+.brand__mark {
+    width: 28px;
+    height: 28px;
+}
+
+.site-header__version {
+    display: none;
+}
+
+.global-nav {
     display: flex;
-    gap: 24px;
+    width: 306px;
+    height: 48px;
+    gap: 2px;
     align-items: center;
-    color: var(--muted);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--soft);
     font-size: 14px;
     font-weight: 500;
 }
 
-.site-header .nav-current {
+.global-nav__item {
+    display: inline-flex;
+    width: 64px;
+    height: 48px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--paper);
+    white-space: nowrap;
+}
+
+.global-nav__item--latest {
+    width: 174px;
+}
+
+.global-nav > :first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.global-nav > :not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.global-nav > :last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.global-nav__item:hover {
     color: var(--accent);
-    font-size: 13px;
-    font-weight: 700;
+    background: var(--tint);
+}
+
+.global-nav__item:active {
+    box-shadow: inset 0 2px 4px rgb(24 23 21 / 16%);
+}
+
+.global-nav__item--current,
+.global-nav__item--current:hover {
+    color: var(--surface);
+    background: var(--accent);
+}
+
+.global-nav__mobile-label {
+    display: none;
 }
 
 .home-page {
@@ -297,6 +360,49 @@ img {
 
 .month-card--current .month-card__number {
     color: var(--surface);
+}
+
+.about-content {
+    display: flex;
+    width: 760px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 60px auto 0;
+}
+
+.about-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.about-intro h1 {
+    margin: 0;
+    font-family: var(--font-serif);
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.about-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.about-actions .button {
+    width: 144px;
+}
+
+.about-actions .button:first-child {
+    width: 164px;
+}
+
+.about-footer {
+    width: 100%;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
 }
 
 .issue-page {
@@ -662,15 +768,83 @@ img {
 @media (max-width: 900px) {
     .site-shell {
         width: calc(100% - 32px);
-        padding-block: 24px 40px;
+        padding-block: 16px 40px;
     }
 
-    .site-header .brand {
+    .site-header {
+        height: 104px;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    .site-header__brand-row {
+        width: 100%;
+        height: 56px;
+        justify-content: space-between;
+    }
+
+    .brand {
+        gap: 10px;
         font-size: 18px;
     }
 
-    .site-header nav a:not(.nav-current) {
+    .site-header__version {
+        display: inline;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .global-nav {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .global-nav__item,
+    .global-nav__item--latest {
+        width: auto;
+        min-width: 0;
+        flex: 1 1 0;
+    }
+
+    .global-nav__desktop-label {
         display: none;
+    }
+
+    .global-nav__mobile-label {
+        display: inline;
+    }
+
+    .about-content {
+        width: 100%;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .about-intro {
+        gap: 12px;
+    }
+
+    .about-intro h1 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    .about-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about-actions .button,
+    .about-actions .button:first-child {
+        width: 100%;
+    }
+
+    .about-footer {
+        font-size: 12px;
+        line-height: 18px;
     }
 
     .home-page {

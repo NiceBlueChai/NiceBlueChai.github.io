@@ -13,10 +13,25 @@
 <body data-page="home">
     <main class="site-shell home-page">
         <header class="site-header">
-            <a class="brand" href="/">月度资源整合</a>
-            <nav aria-label="主导航">
-                <a class="nav-current" href="/2026/07/">2026.07</a>
-                <a href="#history">历史月份</a>
+            <div class="site-header__brand-row">
+                <a class="brand" href="/">
+                    <img class="brand__mark" src="/assets/favicon.svg" alt="">
+                    <span>月度资源整合</span>
+                </a>
+                <span class="site-header__version">
+                    2026.07 · v<span data-issue-version>1.3</span>
+                </span>
+            </div>
+            <nav class="global-nav" aria-label="主导航">
+                <a class="global-nav__item global-nav__item--latest"
+                        data-current-issue-link href="/2026/07/?v=1.3">
+                    <span class="global-nav__desktop-label">
+                        最新一期 · 07 · v<span data-issue-version>1.3</span>
+                    </span>
+                    <span class="global-nav__mobile-label">最新一期</span>
+                </a>
+                <a class="global-nav__item" href="/#history">往期</a>
+                <a class="global-nav__item" href="/about/">关于</a>
             </nav>
         </header>
 
